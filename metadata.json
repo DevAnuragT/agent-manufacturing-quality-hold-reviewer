@@ -1,0 +1,29 @@
+{
+  "slug": "manufacturing-quality-hold-reviewer",
+  "title": "Manufacturing Quality Hold Reviewer",
+  "category": "manufacturing",
+  "description": "Check quality holds for affected lots, containment, disposition, and release evidence.",
+  "fields": {
+    "affected_lots": {
+      "label": "affected lots",
+      "kind": "list",
+      "minimum": 1
+    },
+    "containment_scope": {
+      "label": "containment scope",
+      "kind": "text",
+      "minimum": 40
+    },
+    "disposition_owner": {
+      "label": "disposition owner",
+      "kind": "required",
+      "minimum": 0
+    },
+    "release_approval": {
+      "label": "release approval",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

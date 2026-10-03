@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: manufacturing-quality-hold-reviewer
+version: 0.1.0
+description: Check quality holds for affected lots, containment, disposition, and release evidence.
+skills:
+  - manufacturing-quality-hold-reviewer-skill
+tools:
+  - review-manufacturing-quality-hold-reviewer
+tags:
+  - manufacturing
+  - evidence-driven

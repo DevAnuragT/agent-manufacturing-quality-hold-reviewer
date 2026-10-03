@@ -1,0 +1,59 @@
+{
+  "name": "review-manufacturing-quality-hold-reviewer",
+  "description": "Run Manufacturing Quality Hold Reviewer",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "affected_lots": {
+            "type": "array",
+            "description": "affected lots"
+          },
+          "containment_scope": {
+            "type": "string",
+            "description": "containment scope"
+          },
+          "disposition_owner": {
+            "type": "string",
+            "description": "disposition owner"
+          },
+          "release_approval": {
+            "type": "string",
+            "description": "release approval"
+          }
+        },
+        "required": [
+          "affected_lots",
+          "containment_scope",
+          "disposition_owner",
+          "release_approval"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-manufacturing-quality-hold-reviewer.py",
+    "runtime": "python3"
+  }
+}
